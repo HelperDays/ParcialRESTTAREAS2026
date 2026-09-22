@@ -1,11 +1,11 @@
-import { Static } from "@fastify/type-provider-typebox";
 import { pool } from "../db/database.ts";
 import { NotFoundError } from "../errors/response.errors.ts";
-import { ActualizarTareaDTO, CrearTareaDTO, Tarea } from "../models/tareas.ts";
+import { Tarea } from "../models/tareas.ts";
+import { Type } from "@fastify/type-provider-typebox";
 
-type Tarea = Static<typeof Tarea>; //typebox neggr
-type ActualizarTareaDTO = Static<typeof ActualizarTareaDTO>;
-type CrearTareaDTO = Static<typeof CrearTareaDTO>;
+type Tarea = Type.Static<typeof Tarea>; //typebox neggr
+//type ActualizarTareaDTO = Static<typeof ActualizarTareaDTO>;
+//type CrearTareaDTO = Static<typeof CrearTareaDTO>;
 
 class TareasRepository {
   private readonly baseQuery = `

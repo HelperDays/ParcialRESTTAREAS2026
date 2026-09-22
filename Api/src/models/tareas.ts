@@ -8,8 +8,8 @@ export const Tarea = Type.Object({
   Titulo: Type.String(),
   descripcion: Type.String(),
   prioridad: Type.Integer(), //cambiar probablemente
-  creada: timeStamp,
-  terminada: timeStamp,
+  creada: Type.Boolean(), //por un error lo hice bool
+  terminada: Type.Boolean(), //por un error lo hice bool
   estado: Type.Boolean(),
 });
 

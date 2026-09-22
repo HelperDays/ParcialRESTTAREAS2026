@@ -12,7 +12,7 @@ import {
   NotFoundError,
 } from "../../errors/response.errors.ts";
 
-type Tarea = Static<typeof Tarea>;
+type Tarea = Type.Static<typeof Tarea>;
 
 const tareasRoutes: FastifyPluginAsyncTypebox = async (fastify) => {
   fastify.get(
